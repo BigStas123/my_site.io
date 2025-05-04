@@ -1,0 +1,365 @@
+<aside class="sidebar">
+    <div class="sidebar-header">
+      <h3><i class="fas fa-book-open"></i> Каталог технологий</h3>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <!-- Добавлена ссылка на главную страницу -->
+        <li>
+          <a href="index.html" class="sidebar-link">
+            <i class="fas fa-home"></i> Главная страница
+          </a>
+        </li>
+        <li>
+          <a href="theme1.html" class="sidebar-link">
+            <i class="fas fa-vr-cardboard"></i> VR/AR в обучении
+          </a>
+        </li>
+        <li>
+          <a href="theme2.html" class="sidebar-link">
+            <i class="fas fa-robot"></i> Искусственный интеллект
+          </a>
+        </li>
+        <li>
+          <a href="theme3.html" class="sidebar-link">
+            <i class="fas fa-gamepad"></i> Геймификация
+          </a>
+        </li>
+        <li>
+          <a href="theme4.html" class="sidebar-link">
+            <i class="fas fa-link"></i> Blockchain в образовании
+          </a>
+        </li>
+        <li>
+          <a href="theme5.html" class="sidebar-link">
+            <i class="fas fa-database"></i> Big Data
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="sidebar-footer">
+      <p>Инновации 2025</p>
+    </div>
+  </aside>
+  
+  <style>
+    /* Стили остаются без изменений */
+    .sidebar {
+      width: 250px;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      height: 100vh;
+      padding: 20px;
+      border-right: 1px solid rgba(0,0,0,0.1);
+      box-shadow: 2px 0 15px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      padding: 12px 15px;
+      margin-bottom: 5px;
+      border-radius: 8px;
+      color: #2c3e50;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .sidebar-link:hover {
+      background: #f8f9fa;
+      color: #3498db;
+    }
+    .sidebar-link i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+    }
+  </style>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Искусственный интеллект в образовании | EdTech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6e8efb;
+            --secondary: #a777e3;
+            --dark: #2c3e50;
+            --light: #f5f7fa;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Стили для AI страницы */
+        .ai-hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(110, 142, 251, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ai-hero::after {
+            content: "";
+            background: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485') center/cover;
+            opacity: 0.15;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+        
+        .ai-hero h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .ai-hero p {
+            position: relative;
+            z-index: 1;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .applications-section {
+            margin: 4rem 0;
+        }
+        
+        .application-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .application-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .application-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .application-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 4px solid var(--primary);
+        }
+        
+        .application-content {
+            padding: 1.5rem;
+        }
+        
+        .application-content h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .application-content h3 i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+        
+        .benefits-section {
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary);
+        }
+        
+        .benefit-card h4 {
+            display: flex;
+            align-items: center;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-card h4 i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+            margin: 4rem 0;
+        }
+        
+        .timeline-item {
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+            position: relative;
+            border-left: 4px solid var(--primary);
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .ai-hero {
+                padding: 3rem 1rem;
+            }
+            
+            .application-grid,
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Герой-секция -->
+        <section class="ai-hero">
+            <h1><i class="fas fa-robot"></i> Искусственный интеллект в образовании</h1>
+            <p>Персонализированное обучение будущего уже сегодня</p>
+        </section>
+        
+        <!-- Применение технологий -->
+        <section class="applications-section">
+            <h2>Современные применения ИИ</h2>
+            <div class="application-grid">
+                <div class="application-card">
+                    
+                    <div class="application-content">
+                        <h3><i class="fas fa-brain"></i> Адаптивные системы</h3>
+                        <p>Алгоритмы анализируют прогресс и автоматически подбирают материал нужной сложности для каждого ученика.</p>
+                    </div>
+                </div>
+                
+                <div class="application-card">
+                    
+                    <div class="application-content">
+                        <h3><i class="fas fa-comments"></i> Виртуальные тьюторы</h3>
+                        <p>Круглосуточные помощники, отвечающие на вопросы студентов на естественном языке.</p>
+                    </div>
+                </div>
+                
+                <div class="application-card">
+                    <div class="application-content">
+                        <h3><i class="fas fa-check-double"></i> Автоматическая проверка</h3>
+                        <p>ИИ анализирует развернутые ответы и эссе, экономя время преподавателей.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Преимущества -->
+        <section class="benefits-section">
+            <h2>Ключевые преимущества</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4><i class="fas fa-user-graduate"></i> Персонализация</h4>
+                    <p>Индивидуальные траектории обучения для каждого студента.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4><i class="fas fa-clock"></i> 24/7 Доступность</h4>
+                    <p>Помощь в обучении в любое время суток.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4><i class="fas fa-chart-line"></i> Аналитика</h4>
+                    <p>Детальная статистика успеваемости и прогнозирование.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4><i class="fas fa-lightbulb"></i> Креативность</h4>
+                    <p>Генерация учебных материалов и творческих заданий.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Хронология развития -->
+        <section class="timeline">
+            <h2>Эволюция ИИ в образовании</h2>
+            
+            <div class="timeline-item">
+                <h3>2018: Первые адаптивные платформы</h3>
+                <p>Появление систем, способных подстраивать сложность заданий.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3>2022: ChatGPT в обучении</h3>
+                <p>Языковые модели начали использоваться для объяснения сложных концепций.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3>2024: Эмоциональный интеллект</h3>
+                <p>Системы научились распознавать эмоциональное состояние студентов.</p>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        // Анимация карточек при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.application-card, .benefit-card, .timeline-item');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = `all 0.5s ease ${index * 0.1}s`;
+                
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>

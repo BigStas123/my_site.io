@@ -1,0 +1,370 @@
+<aside class="sidebar">
+    <div class="sidebar-header">
+      <h3><i class="fas fa-book-open"></i> Каталог технологий</h3>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <!-- Добавлена ссылка на главную страницу -->
+        <li>
+          <a href="index.html" class="sidebar-link">
+            <i class="fas fa-home"></i> Главная страница
+          </a>
+        </li>
+        <li>
+          <a href="theme1.html" class="sidebar-link">
+            <i class="fas fa-vr-cardboard"></i> VR/AR в обучении
+          </a>
+        </li>
+        <li>
+          <a href="theme2.html" class="sidebar-link">
+            <i class="fas fa-robot"></i> Искусственный интеллект
+          </a>
+        </li>
+        <li>
+          <a href="theme3.html" class="sidebar-link">
+            <i class="fas fa-gamepad"></i> Геймификация
+          </a>
+        </li>
+        <li>
+          <a href="theme4.html" class="sidebar-link">
+            <i class="fas fa-link"></i> Blockchain в образовании
+          </a>
+        </li>
+        <li>
+          <a href="theme5.html" class="sidebar-link">
+            <i class="fas fa-database"></i> Big Data
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="sidebar-footer">
+      <p>Инновации 2025</p>
+    </div>
+  </aside>
+  
+  <style>
+    /* Стили остаются без изменений */
+    .sidebar {
+      width: 250px;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      height: 100vh;
+      padding: 20px;
+      border-right: 1px solid rgba(0,0,0,0.1);
+      box-shadow: 2px 0 15px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      padding: 12px 15px;
+      margin-bottom: 5px;
+      border-radius: 8px;
+      color: #2c3e50;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .sidebar-link:hover {
+      background: #f8f9fa;
+      color: #3498db;
+    }
+    .sidebar-link i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+    }
+  </style>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инновации в обучении</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Стили для карточек */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .card-icon {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        /* Стеклянный морфизм */
+        .glass-section {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 40px;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        /* Анимации при скролле */
+        [data-aos] {
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        [data-aos="fade-up"] {
+            transform: translateY(30px);
+        }
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Аккордеон */
+        .accordion {
+            margin: 30px 0;
+        }
+        .accordion-item {
+            margin-bottom: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        .accordion-header {
+            background: #3498db;
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion-content {
+            background: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content-inner {
+            padding: 20px;
+        }
+        .accordion-item.active .accordion-header {
+            background: #2980b9;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 300px;
+        }
+
+        /* Градиентные блоки */
+        .gradient-block {
+            background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="gradient-block" data-aos="fade-up">
+            <h1><i class="fas fa-lightbulb"></i> Технологические инновации в обучении</h1>
+            <p>Современные технологии, меняющие образовательный ландшафт</p>
+        </header>
+
+        <section class="glass-section" data-aos="fade-up">
+            <h2>Будущее образования уже здесь</h2>
+            <p>Виртуальная реальность, искусственный интеллект и адаптивные платформы создают персонализированный образовательный опыт для каждого студента.</p>
+        </section>
+
+        <div class="card-grid">
+            <!-- Карточка 1 -->
+            <div class="card" data-aos="fade-up">
+                <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1478&q=80" alt="VR в классе">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3>VR/AR в образовании</h3>
+                    <p>Виртуальная и дополненная реальность позволяют студентам погружаться в исторические события, исследовать человеческое тело или проводить химические эксперименты в безопасной среде.</p>
+                    <a href="theme1.html" class="btn">Узнать больше</a>
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="AI-аналитика">
+
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Искусственный интеллект</h3>
+                    <p>AI-ассистенты анализируют прогресс студентов, адаптируют учебные материалы и предоставляют мгновенную обратную связь, создавая персонализированную траекторию обучения.</p>
+                    <a href="theme2.html" class="btn">Узнать больше</a>
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D3D&auto=format&fit=crop&w=1471&q=80" alt="Геймификация">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Геймификация обучения</h3>
+                    <p>Игровые механики повышают вовлеченность студентов. Баллы, уровни и соревновательные элементы превращают учебный процесс в увлекательное приключение.</p>
+                    <a href="theme3.html" class="btn">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+        <!-- Добавьте этот код в раздел с карточками (внутри <div class="card-grid">) -->
+
+        <!-- Карточка 4: Blockchain в образовании -->
+            <div class="card" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Blockchain в образовании">
+                <div class="card-content">
+                  <div class="card-icon">
+                    <i class="fas fa-link"></i>
+                  </div>
+                  <h3>Blockchain в образовании</h3>
+                  <p>Технология блокчейн обеспечивает безопасное хранение и верификацию образовательных сертификатов, предотвращая подделку документов.</p>
+                  <a href="theme4.html" class="btn">Узнать больше</a>
+                </div>
+              </div>
+  
+            <!-- Карточка 5: Big Data -->
+            <div class="card" data-aos="fade-up" data-aos-delay="400">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Визуализация данных">
+              <div class="card-content">
+                <div class="card-icon">
+                  <i class="fas fa-database"></i>
+                </div>
+                <h3>Big Data в обучении</h3>
+                <p>Анализ больших данных помогает выявлять закономерности в успеваемости и адаптировать учебные программы под потребности студентов.</p>
+                <a href="theme5.html" class="btn">Узнать больше</a>
+              </div>
+            </div>
+        <section class="accordion">
+            <h2 data-aos="fade-up">Частые вопросы</h2>
+            
+            <div class="accordion-item" data-aos="fade-up">
+                <div class="accordion-header">
+                    <span>Как технологии изменят роль преподавателя?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p>Преподаватель становится не источником информации, а наставником и фасилитатором. Технологии берут на себя рутинные задачи (проверку заданий, контроль посещаемости), освобождая время для индивидуальной работы со студентами.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item" data-aos="fade-up">
+                <div class="accordion-header">
+                    <span>Доступны ли эти технологии в России?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p>Да, многие российские EdTech-компании разрабатывают собственные решения. Например, платформы для онлайн-обучения (GeekBrains, Skillbox), VR-лаборатории и системы адаптивного обучения уже используются в школах и вузах.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="gradient-block" data-aos="fade-up">
+            <h2><i class="fas fa-chart-line"></i> Результаты внедрения</h2>
+            <p>По данным исследований, технологии повышают усвоение материала на 40% и сокращают время обучения на 30%.</p>
+        </div>
+    </div>
+
+    <script>
+        // Простая реализация аккордеона
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentNode;
+                item.classList.toggle('active');
+                
+                // Закрываем другие открытые элементы
+                document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Простая реализация анимаций при скролле
+        function checkAOS() {
+            const elements = document.querySelectorAll('[data-aos]');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight * 0.8;
+                if (isVisible) el.classList.add('aos-animate');
+            });
+        }
+        
+        window.addEventListener('scroll', checkAOS);
+        window.addEventListener('load', checkAOS);
+    </script>
+</body>
+</html>

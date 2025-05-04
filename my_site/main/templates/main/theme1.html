@@ -1,0 +1,341 @@
+<aside class="sidebar">
+    <div class="sidebar-header">
+      <h3><i class="fas fa-book-open"></i> Каталог технологий</h3>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <!-- Добавлена ссылка на главную страницу -->
+        <li>
+          <a href="index.html" class="sidebar-link">
+            <i class="fas fa-home"></i> Главная страница
+          </a>
+        </li>
+        <li>
+          <a href="theme1.html" class="sidebar-link">
+            <i class="fas fa-vr-cardboard"></i> VR/AR в обучении
+          </a>
+        </li>
+        <li>
+          <a href="theme2.html" class="sidebar-link">
+            <i class="fas fa-robot"></i> Искусственный интеллект
+          </a>
+        </li>
+        <li>
+          <a href="theme3.html" class="sidebar-link">
+            <i class="fas fa-gamepad"></i> Геймификация
+          </a>
+        </li>
+        <li>
+          <a href="theme4.html" class="sidebar-link">
+            <i class="fas fa-link"></i> Blockchain в образовании
+          </a>
+        </li>
+        <li>
+          <a href="theme5.html" class="sidebar-link">
+            <i class="fas fa-database"></i> Big Data
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="sidebar-footer">
+      <p>Инновации 2025</p>
+    </div>
+  </aside>
+  
+  <style>
+    /* Стили остаются без изменений */
+    .sidebar {
+      width: 250px;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      height: 100vh;
+      padding: 20px;
+      border-right: 1px solid rgba(0,0,0,0.1);
+      box-shadow: 2px 0 15px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      padding: 12px 15px;
+      margin-bottom: 5px;
+      border-radius: 8px;
+      color: #2c3e50;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .sidebar-link:hover {
+      background: #f8f9fa;
+      color: #3498db;
+    }
+    .sidebar-link i {
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+    }
+  </style>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR/AR в образовании | EdTech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6e8efb;
+            --secondary: #a777e3;
+            --dark: #2c3e50;
+            --light: #f5f7fa;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Стили для VR/AR страницы */
+        .vr-hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(110, 142, 251, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .vr-hero::after {
+            content: "";
+            background: url('https://images.unsplash.com/photo-1581094794329-c811329a7234') center/cover;
+            opacity: 0.15;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+        
+        .vr-hero h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .vr-hero p {
+            position: relative;
+            z-index: 1;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .applications-section {
+            margin: 4rem 0;
+        }
+        
+        .application-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .application-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .application-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .application-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 4px solid var(--primary);
+        }
+        
+        .application-content {
+            padding: 1.5rem;
+        }
+        
+        .application-content h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .application-content h3 i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+        
+        .benefits-section {
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary);
+        }
+        
+        .benefit-card h4 {
+            display: flex;
+            align-items: center;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-card h4 i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .vr-hero {
+                padding: 3rem 1rem;
+            }
+            
+            .application-grid,
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Герой-секция -->
+        <section class="vr-hero">
+            <h1><i class="fas fa-vr-cardboard"></i> VR/AR в современном образовании</h1>
+            <p>Иммерсивные технологии, революционизирующие процесс обучения</p>
+        </section>
+        
+        <!-- Применение технологий -->
+        <section class="applications-section">
+            <h2>Практическое применение</h2>
+            <div class="application-grid">
+                <div class="application-card">
+                    <div class="application-content">
+                        <h3><i class="fas fa-medkit"></i> Медицинское образование</h3>
+                        <p>Виртуальные операции и анатомические атласы для студентов-медиков с точной 3D-визуализацией.</p>
+                    </div>
+                </div>
+                
+                <div class="application-card">
+                    
+                    <div class="application-content">
+                        <h3><i class="fas fa-landmark"></i> Исторические реконструкции</h3>
+                        <p>Полное погружение в исторические события через воссозданные города и битвы.</p>
+                    </div>
+                </div>
+                
+                <div class="application-card">
+                    
+                    <div class="application-content">
+                        <h3><i class="fas fa-flask"></i> Научные лаборатории</h3>
+                        <p>Безопасное проведение сложных химических и физических экспериментов в VR-среде.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Преимущества -->
+        <section class="benefits-section">
+            <h2>Ключевые преимущества</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4><i class="fas fa-graduation-cap"></i> Лучшее усвоение</h4>
+                    <p>Увеличение запоминаемости материала на 75% по сравнению с традиционными методами.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4><i class="fas fa-shield-alt"></i> Безопасность</h4>
+                    <p>Опасные эксперименты и процедуры без риска для студентов.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4><i class="fas fa-globe-americas"></i> Доступность</h4>
+                    <p>Возможность изучать любые среды - от глубоководных до космических.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4><i class="fas fa-users"></i> Интерактивность</h4>
+                    <p>Мультипользовательские образовательные пространства для совместного обучения.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Будущее технологий -->
+        <section>
+            <h2>Перспективы развития</h2>
+            <p>К 2025 году ожидается массовое внедрение:</p>
+            <ul style="margin-left: 20px; font-size: 1.1rem;">
+                <li>Тактильной обратной связи в VR-гарнитурах</li>
+                <li>ИИ-ассистентов в виртуальных классах</li>
+                <li>Автоматической адаптации сложности материала</li>
+                <li>Доступных решений для школ и вузов</li>
+            </ul>
+        </section>
+    </div>
+    
+    <script>
+        // Анимация карточек при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.application-card, .benefit-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
